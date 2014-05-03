@@ -10,6 +10,8 @@ A PHP euclidean geometry library.
 [![Latest Unstable Version](https://poser.pugx.org/nubs/geometron/v/unstable.png)](https://packagist.org/packages/nubs/geometron)
 [![License](https://poser.pugx.org/nubs/geometron/license.png)](https://packagist.org/packages/nubs/geometron)
 
+[![Dependency Status](https://www.versioneye.com/user/projects/53651f2bfe0d07d72700005e/badge.png)](https://www.versioneye.com/user/projects/53651f2bfe0d07d72700005e)
+
 ## Requirements
 This library requires PHP 5.3, or newer.
 
