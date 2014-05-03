@@ -1,6 +1,8 @@
 <?php
 namespace Nubs\Geometron;
 
+use Nubs\Vectorix\Vector;
+
 /**
  * This class represents an immutable point in euclidean geometry and its
  * associated operations.
@@ -10,8 +12,8 @@ namespace Nubs\Geometron;
  */
 class Point
 {
-    /** @type array<int|float> The terms (x, y, z, etc.) of the point. */
-    protected $_terms;
+    /** @type \Nubs\Vectorix\Vector A vector representing the point. */
+    protected $_vector;
 
     /**
      * Initalize the point with its terms.
@@ -21,7 +23,7 @@ class Point
      */
     public function __construct(array $terms)
     {
-        $this->_terms = $terms;
+        $this->_vector = new Vector($terms);
     }
 
     /**
@@ -31,6 +33,6 @@ class Point
      */
     public function terms()
     {
-        return $this->_terms;
+        return $this->_vector->components();
     }
 }
