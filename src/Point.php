@@ -27,6 +27,18 @@ class Point
     }
 
     /**
+     * Creates a point from its terms.
+     *
+     * @api
+     * @param array<int|float> $terms The terms (x, y, z, etc.) of the point.
+     * @return self The point with the given terms.
+     */
+    public static function createFromTerms(array $terms)
+    {
+        return new static(new Vector($terms));
+    }
+
+    /**
      * Get the terms of the point.
      *
      * @api
