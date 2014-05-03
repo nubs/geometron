@@ -29,6 +29,7 @@ class Point
     /**
      * Get the terms of the point.
      *
+     * @api
      * @return array<int|float> The terms of the point.
      */
     public function terms()
