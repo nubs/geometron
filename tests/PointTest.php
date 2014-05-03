@@ -16,7 +16,7 @@ class PointTest extends PHPUnit_Framework_TestCase
      *
      * @test
      * @covers ::__construct
-     * @covers ::components
+     * @covers ::terms
      */
     public function termsMaintainStructure()
     {
