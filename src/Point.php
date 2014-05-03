@@ -16,14 +16,14 @@ class Point
     protected $_vector;
 
     /**
-     * Initalize the point with its terms.
+     * Initalize the point from a vector.
      *
      * @api
-     * @param array<int|float> $terms The terms (x, y, z, etc.) of the point.
+     * @param \Nubs\Vectorix\Vector $vector The vector representing the point's terms.
      */
-    public function __construct(array $terms)
+    public function __construct(Vector $vector)
     {
-        $this->_vector = new Vector($terms);
+        $this->_vector = $vector;
     }
 
     /**

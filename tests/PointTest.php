@@ -1,6 +1,7 @@
 <?php
 namespace Nubs\Geometron;
 
+use Nubs\Vectorix\Vector;
 use PHPUnit_Framework_TestCase;
 
 /**
@@ -21,7 +22,7 @@ class PointTest extends PHPUnit_Framework_TestCase
     public function termsMaintainStructure()
     {
         $terms = array(3, 1.8, 'z' => -4.712);
-        $point = new Point($terms);
+        $point = new Point(new Vector($terms));
 
         $this->assertSame($terms, $point->terms());
     }
