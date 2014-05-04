@@ -57,6 +57,6 @@ class Point
      */
     public function terms()
     {
-        return $this->_vector->components();
+        return $this->vector()->components();
     }
 }

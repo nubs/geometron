@@ -34,6 +34,7 @@ class PointTest extends PHPUnit_Framework_TestCase
      * @test
      * @covers ::__construct
      * @covers ::terms
+     * @uses \Nubs\Geometron\Point::vector
      */
     public function termsMaintainStructure()
     {
@@ -52,6 +53,7 @@ class PointTest extends PHPUnit_Framework_TestCase
      * @covers ::createFromTerms
      * @covers ::terms
      * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::vector
      */
     public function createFromTermsMaintainStructure()
     {
