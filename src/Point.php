@@ -70,4 +70,16 @@ class Point
     {
         return $this->vector()->dimension();
     }
+
+    /**
+     * Check whether the given point is the same as this point.
+     *
+     * @api
+     * @param self $b The point to check for equality.
+     * @return bool True if the points are equal and false otherwise.
+     */
+    public function isEqual(self $b)
+    {
+        return $this->vector()->isEqual($b->vector());
+    }
 }

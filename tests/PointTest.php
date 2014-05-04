@@ -76,4 +76,34 @@ class PointTest extends PHPUnit_Framework_TestCase
         $point = new Point(new Vector(array(5, 2, 1)));
         $this->assertSame(3, $point->dimension());
     }
+
+    /**
+     * Verify that 2 equal points are considered the same.
+     *
+     * @test
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::vector
+     * @covers ::isEqual
+     */
+    public function isEqualWithSamePoints()
+    {
+        $a = new Point(new Vector(array(1, 2, 3)));
+        $b = new Point(new Vector(array(1, 2, 3)));
+        $this->assertTrue($a->isEqual($b), 'Points with same terms are equal');
+    }
+
+    /**
+     * Verify that 2 different points are not considered the same.
+     *
+     * @test
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::vector
+     * @covers ::isEqual
+     */
+    public function isEqualWithDifferentPoints()
+    {
+        $a = new Point(new Vector(array(1, 2, 3)));
+        $b = new Point(new Vector(array(9, 2, 3)));
+        $this->assertFalse($a->isEqual($b), 'Points with different terms are not equal');
+    }
 }
