@@ -62,4 +62,18 @@ class PointTest extends PHPUnit_Framework_TestCase
 
         $this->assertSame($terms, $point->terms());
     }
+
+    /**
+     * Verify that the dimension of the point is correct.
+     *
+     * @test
+     * @covers ::dimension
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::vector
+     */
+    public function dimensionIsCorrect()
+    {
+        $point = new Point(new Vector(array(5, 2, 1)));
+        $this->assertSame(3, $point->dimension());
+    }
 }

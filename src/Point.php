@@ -59,4 +59,15 @@ class Point
     {
         return $this->vector()->components();
     }
+
+    /**
+     * Get the dimension of the point.
+     *
+     * @api
+     * @return int The dimension of the point.
+     */
+    public function dimension()
+    {
+        return $this->vector()->dimension();
+    }
 }
