@@ -10,6 +10,22 @@ use PHPUnit_Framework_TestCase;
 class PointTest extends PHPUnit_Framework_TestCase
 {
     /**
+     * Verify that vector() returns the same vector the point was constructed
+     * with.
+     *
+     * @test
+     * @covers ::__construct
+     * @covers ::vector
+     */
+    public function vector()
+    {
+        $vector = new Vector(array(2, -1, -5));
+        $point = new Point($vector);
+
+        $this->assertSame($vector, $point->vector());
+    }
+
+    /**
      * Verify that terms() returns the same terms the point was constructed
      * with.
      *

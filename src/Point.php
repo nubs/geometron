@@ -39,6 +39,17 @@ class Point
     }
 
     /**
+     * Get the vector representing the point's location.
+     *
+     * @api
+     * @return \Nubs\Vectorix\Vector The vector representing the point.
+     */
+    public function vector()
+    {
+        return $this->_vector;
+    }
+
+    /**
      * Get the terms of the point.
      *
      * @api
