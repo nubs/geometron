@@ -82,4 +82,17 @@ class Point
     {
         return $this->vector()->isEqual($b->vector());
     }
+
+    /**
+     * Check whether the given point belongs to the same geometric space as this
+     * point.
+     *
+     * @api
+     * @param self $b The point to check.
+     * @return bool True if the points are in the same geometric space and false otherwise.
+     */
+    public function isSameSpace(self $b)
+    {
+        return $this->vector()->isSameVectorSpace($b->vector());
+    }
 }

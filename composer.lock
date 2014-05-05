@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "c89bbbe933d18d5d0f676f5f9f1d0870",
+    "hash": "8386aefaaff0bcd0bbce200136066ca5",
     "packages": [
         {
             "name": "nubs/vectorix",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nubs/vectorix.git",
-                "reference": "cea316675f7b8b88a4b6dd670741f509251e4651"
+                "reference": "c7377a44f338d841c779cea7953681fee69c639a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nubs/vectorix/zipball/cea316675f7b8b88a4b6dd670741f509251e4651",
-                "reference": "cea316675f7b8b88a4b6dd670741f509251e4651",
+                "url": "https://api.github.com/repos/nubs/vectorix/zipball/c7377a44f338d841c779cea7953681fee69c639a",
+                "reference": "c7377a44f338d841c779cea7953681fee69c639a",
                 "shasum": ""
             },
             "require": {
@@ -47,7 +47,7 @@
                 "math",
                 "vector"
             ],
-            "time": "2014-05-03 01:52:21"
+            "time": "2014-05-05 11:13:57"
         }
     ],
     "packages-dev": [

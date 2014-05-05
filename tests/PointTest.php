@@ -106,4 +106,50 @@ class PointTest extends PHPUnit_Framework_TestCase
         $b = new Point(new Vector(array(9, 2, 3)));
         $this->assertFalse($a->isEqual($b), 'Points with different terms are not equal');
     }
+
+    /**
+     * Verify that 2 same-space points are considered the same space.
+     *
+     * @test
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::vector
+     * @covers ::isSameSpace
+     */
+    public function isSameSpaceWithSameSpacePoints()
+    {
+        $a = new Point(new Vector(array(1, 2, 3)));
+        $b = new Point(new Vector(array(5, 7, 2)));
+        $this->assertTrue($a->isSameSpace($b), 'Points with same space are of the same space');
+    }
+
+    /**
+     * Verify that 2 different-dimension points are not considered the same
+     * space.
+     *
+     * @test
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::vector
+     * @covers ::isSameSpace
+     */
+    public function isSameSpaceWithDifferentDimensionPoints()
+    {
+        $a = new Point(new Vector(array(1, 2, 3)));
+        $b = new Point(new Vector(array(5, 7)));
+        $this->assertFalse($a->isSameSpace($b), 'Points with different dimension are not of the same space');
+    }
+
+    /**
+     * Verify that 2 differently keyed points are not considered the same space.
+     *
+     * @test
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::vector
+     * @covers ::isSameSpace
+     */
+    public function isSameSpaceWithDifferentlyKeyedPoints()
+    {
+        $a = new Point(new Vector(array(1, 2, 3)));
+        $b = new Point(new Vector(array('x' => 5, 'y' => 7, 'z' => 2)));
+        $this->assertFalse($a->isSameSpace($b), 'Points with different keys are not of the same space');
+    }
 }
