@@ -8,7 +8,7 @@ use Nubs\Vectorix\Vector;
  * associated operations.
  *
  * Instances of this class will not change state.  Any operations on the point
- * will return a new vector with the new state.
+ * will return a new point with the new state.
  */
 class Point
 {
