@@ -56,4 +56,16 @@ class LineSegment
     {
         return $this->_b;
     }
+
+    /**
+     * Determine whether this line segment is degenerate.
+     *
+     * A line segment is degenerate if its two points are the same.
+     *
+     * @return bool True if the line segment is degenerate, false otherwise.
+     */
+    public function isDegenerate()
+    {
+        return $this->a()->isEqual($this->b());
+    }
 }

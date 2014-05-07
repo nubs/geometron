@@ -68,4 +68,46 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
 
         new LineSegment($a, $b);
     }
+
+    /**
+     * Verify that isDegenerate detects degenerate points.
+     *
+     * @test
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::vector
+     * @uses \Nubs\Geometron\Point::isSameSpace
+     * @uses \Nubs\Geometron\Point::isEqual
+     * @uses \Nubs\Geometron\LineSegment::a
+     * @uses \Nubs\Geometron\LineSegment::b
+     * @covers ::isDegenerate
+     */
+    public function isDegenerateWithDegenerateLine()
+    {
+        $a = new Point(new Vector(array(1, 7, 5)));
+        $b = new Point(new Vector(array(1, 7, 5)));
+        $line = new LineSegment($a, $b);
+
+        $this->assertTrue($line->isDegenerate());
+    }
+
+    /**
+     * Verify that isDegenerate detects nondegenerate points.
+     *
+     * @test
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::vector
+     * @uses \Nubs\Geometron\Point::isSameSpace
+     * @uses \Nubs\Geometron\Point::isEqual
+     * @uses \Nubs\Geometron\LineSegment::a
+     * @uses \Nubs\Geometron\LineSegment::b
+     * @covers ::isDegenerate
+     */
+    public function isDegenerateWithNondegenerateLine()
+    {
+        $a = new Point(new Vector(array(1, 7, 5)));
+        $b = new Point(new Vector(array(8, 7, 5)));
+        $line = new LineSegment($a, $b);
+
+        $this->assertFalse($line->isDegenerate());
+    }
 }
