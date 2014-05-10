@@ -110,4 +110,47 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
 
         $this->assertFalse($line->isDegenerate());
     }
+
+    /**
+     * Verify that vector() returns the correct vector.
+     *
+     * @test
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::vector
+     * @uses \Nubs\Geometron\Point::isSameSpace
+     * @uses \Nubs\Geometron\LineSegment::a
+     * @uses \Nubs\Geometron\LineSegment::b
+     * @covers ::vector
+     */
+    public function vectorBetweenSimplePoints()
+    {
+        $a = new Point(new Vector(array(1, 3)));
+        $b = new Point(new Vector(array(5, 7)));
+        $line = new LineSegment($a, $b);
+
+        $expected = new Vector(array(4, 4));
+        $this->assertTrue($expected->isEqual($line->vector()));
+    }
+
+    /**
+     * Verify that vector() returns the correct vector between a degenerate line
+     * segment.
+     *
+     * @test
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::vector
+     * @uses \Nubs\Geometron\Point::isSameSpace
+     * @uses \Nubs\Geometron\LineSegment::a
+     * @uses \Nubs\Geometron\LineSegment::b
+     * @covers ::vector
+     */
+    public function vectorOfDegenerateLineSegment()
+    {
+        $a = new Point(new Vector(array(1, 3)));
+        $b = new Point(new Vector(array(1, 3)));
+        $line = new LineSegment($a, $b);
+
+        $expected = new Vector(array(0, 0));
+        $this->assertTrue($expected->isEqual($line->vector()));
+    }
 }

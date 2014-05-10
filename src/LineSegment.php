@@ -69,4 +69,15 @@ class LineSegment
     {
         return $this->a()->isEqual($this->b());
     }
+
+    /**
+     * Calculates the vector between the two endpoints of the line segment.
+     *
+     * @api
+     * @return \Nubs\Vectorix\Vector The vector from a() to b().
+     */
+    public function vector()
+    {
+        return $this->b()->vector()->subtract($this->a()->vector());
+    }
 }
