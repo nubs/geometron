@@ -62,6 +62,7 @@ class LineSegment
      *
      * A line segment is degenerate if its two points are the same.
      *
+     * @api
      * @return bool True if the line segment is degenerate, false otherwise.
      */
     public function isDegenerate()
