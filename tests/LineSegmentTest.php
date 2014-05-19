@@ -77,6 +77,7 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      * @uses \Nubs\Geometron\Point::vector
      * @uses \Nubs\Geometron\Point::isSameSpace
      * @uses \Nubs\Geometron\Point::isEqual
+     * @uses \Nubs\Geometron\LineSegment::__construct
      * @uses \Nubs\Geometron\LineSegment::a
      * @uses \Nubs\Geometron\LineSegment::b
      * @covers ::isDegenerate
@@ -98,6 +99,7 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      * @uses \Nubs\Geometron\Point::vector
      * @uses \Nubs\Geometron\Point::isSameSpace
      * @uses \Nubs\Geometron\Point::isEqual
+     * @uses \Nubs\Geometron\LineSegment::__construct
      * @uses \Nubs\Geometron\LineSegment::a
      * @uses \Nubs\Geometron\LineSegment::b
      * @covers ::isDegenerate
@@ -118,6 +120,7 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      * @uses \Nubs\Geometron\Point::__construct
      * @uses \Nubs\Geometron\Point::vector
      * @uses \Nubs\Geometron\Point::isSameSpace
+     * @uses \Nubs\Geometron\LineSegment::__construct
      * @uses \Nubs\Geometron\LineSegment::a
      * @uses \Nubs\Geometron\LineSegment::b
      * @covers ::vector
@@ -140,6 +143,7 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      * @uses \Nubs\Geometron\Point::__construct
      * @uses \Nubs\Geometron\Point::vector
      * @uses \Nubs\Geometron\Point::isSameSpace
+     * @uses \Nubs\Geometron\LineSegment::__construct
      * @uses \Nubs\Geometron\LineSegment::a
      * @uses \Nubs\Geometron\LineSegment::b
      * @covers ::vector
