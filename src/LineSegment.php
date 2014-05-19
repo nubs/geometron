@@ -10,7 +10,7 @@ use Exception;
  * Instances of this class will not change state.  Any operations on the line
  * segment will return a new line segment with the new state.
  */
-class LineSegment
+class LineSegment implements Finite
 {
     /** @type \Nubs\Geometron\Point One endpoint of the line segment. */
     protected $_a;
@@ -79,5 +79,17 @@ class LineSegment
     public function vector()
     {
         return $this->b()->vector()->subtract($this->a()->vector());
+    }
+
+    /**
+     * The center of a line segment is the point halfway along the line.
+     *
+     * @api
+     * @return \Nubs\Geometron\Point The center-point of the line segment.
+     * @see \Nubs\Geometron\Finite::center()
+     */
+    public function center()
+    {
+        return new Point($this->a()->vector()->add($this->vector()->divideByScalar(2)));
     }
 }

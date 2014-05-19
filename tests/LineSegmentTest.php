@@ -157,4 +157,29 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
         $expected = new Vector(array(0, 0));
         $this->assertTrue($expected->isEqual($line->vector()));
     }
+
+    /**
+     * Verify that center returns the center point of a line segment.
+     *
+     * @test
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::terms
+     * @uses \Nubs\Geometron\Point::vector
+     * @uses \Nubs\Geometron\Point::isSameSpace
+     * @uses \Nubs\Geometron\LineSegment::__construct
+     * @uses \Nubs\Geometron\LineSegment::a
+     * @uses \Nubs\Geometron\LineSegment::b
+     * @uses \Nubs\Geometron\LineSegment::vector
+     * @covers ::center
+     */
+    public function center()
+    {
+        $a = new Point(new Vector(array(7, 9)));
+        $b = new Point(new Vector(array(13, 17)));
+        $line = new LineSegment($a, $b);
+        $centerTerms = $line->center()->terms();
+
+        $this->assertEquals(10.0, $centerTerms[0], '', 1e-10);
+        $this->assertEquals(13.0, $centerTerms[1], '', 1e-10);
+    }
 }

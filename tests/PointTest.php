@@ -152,4 +152,20 @@ class PointTest extends PHPUnit_Framework_TestCase
         $b = new Point(new Vector(array('x' => 5, 'y' => 7, 'z' => 2)));
         $this->assertFalse($a->isSameSpace($b), 'Points with different keys are not of the same space');
     }
+
+    /**
+     * Verify that a point's center is the same point.
+     *
+     * @test
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::vector
+     * @uses \Nubs\Geometron\Point::terms
+     * @covers ::center
+     */
+    public function center()
+    {
+        $a = new Point(new Vector(array(5, 7, 9)));
+        $center = $a->center();
+        $this->assertSame($a->terms(), $center->terms());
+    }
 }

@@ -10,7 +10,7 @@ use Nubs\Vectorix\Vector;
  * Instances of this class will not change state.  Any operations on the point
  * will return a new point with the new state.
  */
-class Point
+class Point implements Finite
 {
     /** @type \Nubs\Vectorix\Vector A vector representing the point. */
     protected $_vector;
@@ -94,5 +94,17 @@ class Point
     public function isSameSpace(self $b)
     {
         return $this->vector()->isSameVectorSpace($b->vector());
+    }
+
+    /**
+     * The center of the point is just the point itself.
+     *
+     * @api
+     * @return \Nubs\Geometron\Point This point.
+     * @see \Nubs\Geometron\Finite::center()
+     */
+    public function center()
+    {
+        return $this;
     }
 }
