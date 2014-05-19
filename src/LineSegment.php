@@ -82,6 +82,17 @@ class LineSegment implements Finite
     }
 
     /**
+     * Calculates the length of the line segment.
+     *
+     * @api
+     * @return float The length of the line segment.
+     */
+    public function length()
+    {
+        return $this->vector()->length();
+    }
+
+    /**
      * The center of a line segment is the point halfway along the line.
      *
      * @api

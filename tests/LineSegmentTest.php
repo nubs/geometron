@@ -159,6 +159,29 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * Verify that the length method works correctly.
+     *
+     * @test
+     * @uses \Nubs\Geometron\Point::__construct
+     * @uses \Nubs\Geometron\Point::terms
+     * @uses \Nubs\Geometron\Point::vector
+     * @uses \Nubs\Geometron\Point::isSameSpace
+     * @uses \Nubs\Geometron\LineSegment::__construct
+     * @uses \Nubs\Geometron\LineSegment::a
+     * @uses \Nubs\Geometron\LineSegment::b
+     * @uses \Nubs\Geometron\LineSegment::vector
+     * @covers ::length
+     */
+    public function length()
+    {
+        $a = new Point(new Vector(array(7, 9)));
+        $b = new Point(new Vector(array(4, 5)));
+        $line = new LineSegment($a, $b);
+
+        $this->assertEquals(5.0, $line->length(), '', 1e-10);
+    }
+
+    /**
      * Verify that center returns the center point of a line segment.
      *
      * @test
