@@ -15,7 +15,8 @@
         "nubs/vectorix": "~1.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.0"
+        "phpunit/phpunit": "~4.0",
+        "squizlabs/php_codesniffer": "~1.5"
     },
     "autoload": {
         "psr-4": { 
