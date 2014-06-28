@@ -1,16 +1,15 @@
 # geometron
 A PHP euclidean geometry library.
 
-[![Build Status](https://travis-ci.org/nubs/geometron.png)](https://travis-ci.org/nubs/geometron)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nubs/geometron/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nubs/geometron/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/nubs/geometron/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/nubs/geometron/?branch=master)
+[![Build Status](http://img.shields.io/travis/nubs/geometron.svg?style=flat)](https://travis-ci.org/nubs/geometron)
+[![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/nubs/geometron.svg?style=flat)](https://scrutinizer-ci.com/g/nubs/geometron/)
+[![Code Coverage](http://img.shields.io/scrutinizer/coverage/g/nubs/geometron.svg?style=flat)](https://scrutinizer-ci.com/g/nubs/geometron/)
 
-[![Latest Stable Version](https://poser.pugx.org/nubs/geometron/v/stable.png)](https://packagist.org/packages/nubs/geometron)
-[![Total Downloads](https://poser.pugx.org/nubs/geometron/downloads.png)](https://packagist.org/packages/nubs/geometron)
-[![Latest Unstable Version](https://poser.pugx.org/nubs/geometron/v/unstable.png)](https://packagist.org/packages/nubs/geometron)
-[![License](https://poser.pugx.org/nubs/geometron/license.png)](https://packagist.org/packages/nubs/geometron)
+[![Latest Stable Version](http://img.shields.io/packagist/v/nubs/geometron.svg?style=flat)](https://packagist.org/packages/nubs/geometron)
+[![Total Downloads](http://img.shields.io/packagist/dt/nubs/geometron.svg?style=flat)](https://packagist.org/packages/nubs/geometron)
+[![License](http://img.shields.io/packagist/l/nubs/geometron.svg?style=flat)](https://packagist.org/packages/nubs/geometron)
 
-[![Dependency Status](https://www.versioneye.com/user/projects/53651f2bfe0d07d72700005e/badge.png)](https://www.versioneye.com/user/projects/53651f2bfe0d07d72700005e)
+[![Dependency Status](https://www.versioneye.com/user/projects/53651f2bfe0d07d72700005e/badge.svg?style=flat)](https://www.versioneye.com/user/projects/53651f2bfe0d07d72700005e)
 
 ## Requirements
 This library requires PHP 5.3, or newer.
