@@ -3,7 +3,7 @@ A PHP euclidean geometry library.
 
 [![Build Status](http://img.shields.io/travis/nubs/geometron.svg?style=flat)](https://travis-ci.org/nubs/geometron)
 [![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/nubs/geometron.svg?style=flat)](https://scrutinizer-ci.com/g/nubs/geometron/)
-[![Code Coverage](http://img.shields.io/scrutinizer/coverage/g/nubs/geometron.svg?style=flat)](https://scrutinizer-ci.com/g/nubs/geometron/)
+[![Code Coverage](http://img.shields.io/coveralls/nubs/geometron.svg?style=flat)](https://coveralls.io/r/nubs/geometron)
 
 [![Latest Stable Version](http://img.shields.io/packagist/v/nubs/geometron.svg?style=flat)](https://packagist.org/packages/nubs/geometron)
 [![Total Downloads](http://img.shields.io/packagist/dt/nubs/geometron.svg?style=flat)](https://packagist.org/packages/nubs/geometron)
