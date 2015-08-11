@@ -22,3 +22,7 @@ following command:
 ```bash
 composer require nubs/geometron
 ```
+
+## License
+geometron is licensed under the MIT license.  See [LICENSE](LICENSE) for the
+full license text.
