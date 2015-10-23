@@ -12,7 +12,7 @@ A PHP euclidean geometry library.
 [![Dependency Status](https://www.versioneye.com/user/projects/53651f2bfe0d07d72700005e/badge.svg?style=flat)](https://www.versioneye.com/user/projects/53651f2bfe0d07d72700005e)
 
 ## Requirements
-This library requires PHP 5.4, or newer.
+This library requires PHP 5.5, or newer.
 
 ## Installation
 This package uses [composer](https://getcomposer.org) so you can just add
