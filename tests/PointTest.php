@@ -19,7 +19,7 @@ class PointTest extends PHPUnit_Framework_TestCase
      */
     public function vector()
     {
-        $vector = new Vector(array(2, -1, -5));
+        $vector = new Vector([2, -1, -5]);
         $point = new Point($vector);
 
         $this->assertSame($vector, $point->vector());
@@ -38,7 +38,7 @@ class PointTest extends PHPUnit_Framework_TestCase
      */
     public function termsMaintainStructure()
     {
-        $terms = array(3, 1.8, 'z' => -4.712);
+        $terms = [3, 1.8, 'z' => -4.712];
         $point = new Point(new Vector($terms));
 
         $this->assertSame($terms, $point->terms());
@@ -57,7 +57,7 @@ class PointTest extends PHPUnit_Framework_TestCase
      */
     public function createFromTermsMaintainStructure()
     {
-        $terms = array(3, 1.8, 'z' => -4.712);
+        $terms = [3, 1.8, 'z' => -4.712];
         $point = Point::createFromTerms($terms);
 
         $this->assertSame($terms, $point->terms());
@@ -73,7 +73,7 @@ class PointTest extends PHPUnit_Framework_TestCase
      */
     public function dimensionIsCorrect()
     {
-        $point = new Point(new Vector(array(5, 2, 1)));
+        $point = new Point(new Vector([5, 2, 1]));
         $this->assertSame(3, $point->dimension());
     }
 
@@ -87,8 +87,8 @@ class PointTest extends PHPUnit_Framework_TestCase
      */
     public function isEqualWithSamePoints()
     {
-        $a = new Point(new Vector(array(1, 2, 3)));
-        $b = new Point(new Vector(array(1, 2, 3)));
+        $a = new Point(new Vector([1, 2, 3]));
+        $b = new Point(new Vector([1, 2, 3]));
         $this->assertTrue($a->isEqual($b), 'Points with same terms are equal');
     }
 
@@ -102,8 +102,8 @@ class PointTest extends PHPUnit_Framework_TestCase
      */
     public function isEqualWithDifferentPoints()
     {
-        $a = new Point(new Vector(array(1, 2, 3)));
-        $b = new Point(new Vector(array(9, 2, 3)));
+        $a = new Point(new Vector([1, 2, 3]));
+        $b = new Point(new Vector([9, 2, 3]));
         $this->assertFalse($a->isEqual($b), 'Points with different terms are not equal');
     }
 
@@ -117,8 +117,8 @@ class PointTest extends PHPUnit_Framework_TestCase
      */
     public function isSameSpaceWithSameSpacePoints()
     {
-        $a = new Point(new Vector(array(1, 2, 3)));
-        $b = new Point(new Vector(array(5, 7, 2)));
+        $a = new Point(new Vector([1, 2, 3]));
+        $b = new Point(new Vector([5, 7, 2]));
         $this->assertTrue($a->isSameSpace($b), 'Points with same space are of the same space');
     }
 
@@ -133,8 +133,8 @@ class PointTest extends PHPUnit_Framework_TestCase
      */
     public function isSameSpaceWithDifferentDimensionPoints()
     {
-        $a = new Point(new Vector(array(1, 2, 3)));
-        $b = new Point(new Vector(array(5, 7)));
+        $a = new Point(new Vector([1, 2, 3]));
+        $b = new Point(new Vector([5, 7]));
         $this->assertFalse($a->isSameSpace($b), 'Points with different dimension are not of the same space');
     }
 
@@ -148,8 +148,8 @@ class PointTest extends PHPUnit_Framework_TestCase
      */
     public function isSameSpaceWithDifferentlyKeyedPoints()
     {
-        $a = new Point(new Vector(array(1, 2, 3)));
-        $b = new Point(new Vector(array('x' => 5, 'y' => 7, 'z' => 2)));
+        $a = new Point(new Vector([1, 2, 3]));
+        $b = new Point(new Vector(['x' => 5, 'y' => 7, 'z' => 2]));
         $this->assertFalse($a->isSameSpace($b), 'Points with different keys are not of the same space');
     }
 
@@ -164,7 +164,7 @@ class PointTest extends PHPUnit_Framework_TestCase
      */
     public function center()
     {
-        $a = new Point(new Vector(array(5, 7, 9)));
+        $a = new Point(new Vector([5, 7, 9]));
         $center = $a->center();
         $this->assertSame($a->terms(), $center->terms());
     }

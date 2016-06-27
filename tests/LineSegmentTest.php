@@ -22,8 +22,8 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      */
     public function a()
     {
-        $a = new Point(new Vector(array(2, -1, -5)));
-        $b = new Point(new Vector(array(3, 2, -7)));
+        $a = new Point(new Vector([2, -1, -5]));
+        $b = new Point(new Vector([3, 2, -7]));
         $lineSegment = new LineSegment($a, $b);
 
         $this->assertSame($a, $lineSegment->a());
@@ -42,8 +42,8 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      */
     public function b()
     {
-        $a = new Point(new Vector(array(2, -1, -5)));
-        $b = new Point(new Vector(array(3, 2, -7)));
+        $a = new Point(new Vector([2, -1, -5]));
+        $b = new Point(new Vector([3, 2, -7]));
         $lineSegment = new LineSegment($a, $b);
 
         $this->assertSame($b, $lineSegment->b());
@@ -63,8 +63,8 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      */
     public function constructWithPointsOfDifferentSpace()
     {
-        $a = new Point(new Vector(array(2, -1, -5)));
-        $b = new Point(new Vector(array('x' => 3, 'y' => 2, 'z' => -7)));
+        $a = new Point(new Vector([2, -1, -5]));
+        $b = new Point(new Vector(['x' => 3, 'y' => 2, 'z' => -7]));
 
         new LineSegment($a, $b);
     }
@@ -84,8 +84,8 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      */
     public function isDegenerateWithDegenerateLine()
     {
-        $a = new Point(new Vector(array(1, 7, 5)));
-        $b = new Point(new Vector(array(1, 7, 5)));
+        $a = new Point(new Vector([1, 7, 5]));
+        $b = new Point(new Vector([1, 7, 5]));
         $line = new LineSegment($a, $b);
 
         $this->assertTrue($line->isDegenerate());
@@ -106,8 +106,8 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      */
     public function isDegenerateWithNondegenerateLine()
     {
-        $a = new Point(new Vector(array(1, 7, 5)));
-        $b = new Point(new Vector(array(8, 7, 5)));
+        $a = new Point(new Vector([1, 7, 5]));
+        $b = new Point(new Vector([8, 7, 5]));
         $line = new LineSegment($a, $b);
 
         $this->assertFalse($line->isDegenerate());
@@ -127,11 +127,11 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      */
     public function vectorBetweenSimplePoints()
     {
-        $a = new Point(new Vector(array(1, 3)));
-        $b = new Point(new Vector(array(5, 7)));
+        $a = new Point(new Vector([1, 3]));
+        $b = new Point(new Vector([5, 7]));
         $line = new LineSegment($a, $b);
 
-        $expected = new Vector(array(4, 4));
+        $expected = new Vector([4, 4]);
         $this->assertTrue($expected->isEqual($line->vector()));
     }
 
@@ -150,11 +150,11 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      */
     public function vectorOfDegenerateLineSegment()
     {
-        $a = new Point(new Vector(array(1, 3)));
-        $b = new Point(new Vector(array(1, 3)));
+        $a = new Point(new Vector([1, 3]));
+        $b = new Point(new Vector([1, 3]));
         $line = new LineSegment($a, $b);
 
-        $expected = new Vector(array(0, 0));
+        $expected = new Vector([0, 0]);
         $this->assertTrue($expected->isEqual($line->vector()));
     }
 
@@ -174,8 +174,8 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      */
     public function length()
     {
-        $a = new Point(new Vector(array(7, 9)));
-        $b = new Point(new Vector(array(4, 5)));
+        $a = new Point(new Vector([7, 9]));
+        $b = new Point(new Vector([4, 5]));
         $line = new LineSegment($a, $b);
 
         $this->assertEquals(5.0, $line->length(), '', 1e-10);
@@ -197,8 +197,8 @@ class LineSegmentTest extends PHPUnit_Framework_TestCase
      */
     public function center()
     {
-        $a = new Point(new Vector(array(7, 9)));
-        $b = new Point(new Vector(array(13, 17)));
+        $a = new Point(new Vector([7, 9]));
+        $b = new Point(new Vector([13, 17]));
         $line = new LineSegment($a, $b);
         $centerTerms = $line->center()->terms();
 
